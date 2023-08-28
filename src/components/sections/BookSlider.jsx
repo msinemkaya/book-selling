@@ -3,9 +3,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import BookCard from '../common/BookCard'
-import useBooksContext from '../../hooks/use-books-context';
 
-export default function BookSlider() {
+export default function BookSlider({ bookList }) {
   const settings = {
     dots: false,
     infinite: true,
@@ -35,8 +34,6 @@ export default function BookSlider() {
       ]
   };
 
-  const { bookList } = useBooksContext()
-  
   return (
     <Slider {...settings} className='xs:mx-6 mx-4'>
       {bookList.slice(0, 5).map((book) => <BookCard key={book.id} book={book}/>)}
