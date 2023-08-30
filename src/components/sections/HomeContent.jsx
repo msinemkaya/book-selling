@@ -5,13 +5,11 @@ import useBooksContext from '../../hooks/use-books-context'
 
 export default function HomeContent() {
 
-  const {newOffers, romance} = useBooksContext()
-  console.log(newOffers, romance)
+  const {bookList} = useBooksContext()
 
   return (
     <Container className='px-6'>
-      <BookSection sectionTitle='new offers' bookList={newOffers}/>
-      <BookSection sectionTitle='romance' bookList={romance}/>
+      {bookList.map((list, index )=> <BookSection bookList={list} key={index} />)}
     </Container>
   )
 }

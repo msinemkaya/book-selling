@@ -3,13 +3,14 @@ import Container from '../base/Container'
 import SectionTitle from '../common/SectionTitle'
 import BookSlider from './BookSlider'
 
-export default function BookSection({sectionTitle, bookList}) {
+export default function BookSection({bookList}) {
+
   return (
     <Container>
-      <SectionTitle route={sectionTitle}>
-        {sectionTitle}
+      <SectionTitle route={bookList.id}>
+        {bookList.title}
       </SectionTitle>
-      <BookSlider bookList={bookList}/>
+      <BookSlider bookList={bookList.data}/>
     </Container>
   )
 }
