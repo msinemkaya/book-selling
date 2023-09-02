@@ -16,7 +16,7 @@ export default function User() {
         <SlUser />
       </NavbarButton>
       {isOpen && (
-        <FlexBox className='absolute top-full flex-col bg-neutral-300 rounded rounded-tl-none px-3 py-1'>
+        <FlexBox className='absolute top-full right-0 flex-col bg-neutral-300 rounded rounded-tr-none px-3 py-1'>
           <Link className='whitespace-nowrap'>Log out</Link>
         </FlexBox>
       )}

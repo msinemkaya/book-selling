@@ -23,8 +23,12 @@ const useDropdown = (dropdown) => {
   const handleClick = () => {
     setIsOpen(!isOpen)
   }
+  
+  const handleSelection = () => {
+    setIsOpen(false)
+  }
 
-  return { handleClick, isOpen, setIsOpen }
+  return { handleClick, isOpen, setIsOpen, handleSelection }
 }
 
 export default useDropdown

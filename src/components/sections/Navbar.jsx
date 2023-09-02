@@ -12,8 +12,7 @@ export default function Navbar() {
   const isHome = useFindLocation()
 
   return (
-    <FlexBox className='items-center justify-between gap-4 py-4 px-6 mb-8'>
-      <User />
+    <FlexBox className='items-center justify-between gap-4 py-4 px-6'>
       <SearchBar />
       <FlexBox className='items-center justify-center gap-1'>
         {!isHome && (
@@ -24,6 +23,7 @@ export default function Navbar() {
           </Link>
         )}
         <ShoppingBasket />
+        <User />
       </FlexBox>
     </FlexBox>
   )

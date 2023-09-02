@@ -1,6 +1,7 @@
 import React from 'react'
 import Container from '../base/Container'
 import BookSection from './BookSection'
+import PopularSections from './PopularSections'
 import useBooksContext from '../../hooks/use-books-context'
 
 export default function HomeContent() {
@@ -9,7 +10,7 @@ export default function HomeContent() {
 
   return (
     <Container className='px-6'>
-      {bookList.map((list, index )=> <BookSection bookList={list} key={index} />)}
+      {bookList.slice(0,2).map((list, index )=> <BookSection bookList={list} key={index} />)}
     </Container>
   )
 }
