@@ -5,7 +5,7 @@ import NavbarButton from '../common/NavbarButton'
 export default function ShoppingBasket() {
   return (
     <NavbarButton>
-      <BsBasket/>
+      <BsBasket fill='#6868ac' size={20}/>
     </NavbarButton>
   )
 }

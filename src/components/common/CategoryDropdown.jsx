@@ -8,10 +8,9 @@ import Container from '../base/Container'
 import useBooksContext from '../../hooks/use-books-context'
 import CategoryLink from './CategoryLink'
 
-export default function CategoryDropdown() { 
+export default function CategoryDropdown({ list }) { 
   const dropdown = useRef(null)
   const {isOpen, handleSelection, handleClick} = useDropdown(dropdown)
-  const { bookList } = useBooksContext()
 
   return (
     <RefContainer ref={dropdown} className='relative'>
@@ -20,8 +19,8 @@ export default function CategoryDropdown() {
         {isOpen ? <FiChevronUp strokeWidth={4} stroke='#EF5097'/> : <FiChevronDown strokeWidth={4} stroke='#EF5097'/>}
       </FlexBox>
       {isOpen && (
-        <FlexBox onClick={handleSelection} className='absolute top-full right-0 flex-col border-2 border-pink bg-lightblue/50 rounded rounded-tr-none px-2 py-2 text-center gap-1'>
-          {bookList.slice(3).map(list => <CategoryLink list={list} className='bg-yellow/70 hover:bg-yellow/90 p-1 px-3 rounded hover:!text-orange'/>)}
+        <FlexBox onClick={handleSelection} className='absolute top-full right-0 z-50 flex-col border-2 border-pink bg-lightblue/50 rounded rounded-tr-none px-2 py-2 text-center gap-1'>
+          {list.map(list => <CategoryLink list={list} className='bg-yellow/70 hover:bg-yellow/90 p-1 px-3 rounded hover:!text-orange'/>)}
         </FlexBox>
       )}
     </RefContainer>

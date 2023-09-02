@@ -13,7 +13,7 @@ export default function User() {
   return (
     <RefContainer ref={dropdown} className='relative'>
       <NavbarButton onClick={handleClick} className={isOpen && 'bg-neutral-300 rounded-b-none'}>
-        <SlUser />
+        <SlUser fill='#6868ac' size={20}/>
       </NavbarButton>
       {isOpen && (
         <FlexBox className='absolute top-full right-0 flex-col bg-neutral-300 rounded rounded-tr-none px-3 py-1'>
