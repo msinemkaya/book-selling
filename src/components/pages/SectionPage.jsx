@@ -8,16 +8,16 @@ import useBooksContext from '../../hooks/use-books-context'
 export default function SectionPage() {
   const { id } = useParams()
   const { bookList } = useBooksContext()
-  const list = bookList.find(list => list.id === id)
+  const list = bookList.filter(book => book.type.includes(id))
 
   console.log(list)
 
   return (
     <Container>
       <DetailHeading>
-        {list.title}
+        {id}
       </DetailHeading>
-      <BookList bookList={list.data}/>
+      <BookList bookList={list}/>
     </Container>
   )
 }

@@ -8,7 +8,7 @@ import useBooksContext from '../../hooks/use-books-context'
 export default function BookDetail() {
   const { id } = useParams()
   const { bookList } = useBooksContext()
-  const book = bookList.data.find(item => item.id === id)
+  const book = bookList.find(item => item.id === id)
 
   console.log(book)
   return (

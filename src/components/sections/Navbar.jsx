@@ -18,7 +18,7 @@ export default function Navbar() {
         {!isHome && (
           <Link to='/'>
             <NavbarButton>
-              <IoLibraryOutline />
+              <IoLibraryOutline stroke='#6868ac' size={20}/>
             </NavbarButton>
           </Link>
         )}

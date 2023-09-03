@@ -20,7 +20,7 @@ export default function CategoryDropdown({ list }) {
       </FlexBox>
       {isOpen && (
         <FlexBox onClick={handleSelection} className='absolute top-full right-0 z-50 flex-col border-2 border-pink bg-lightblue/50 rounded rounded-tr-none px-2 py-2 text-center gap-1'>
-          {list.map(list => <CategoryLink list={list} className='bg-yellow/70 hover:bg-yellow/90 p-1 px-3 rounded hover:!text-orange'/>)}
+          {list.map(type => <CategoryLink type={type} className='bg-yellow/70 hover:bg-yellow/90 p-1 px-3 rounded hover:!text-orange'/>)}
         </FlexBox>
       )}
     </RefContainer>

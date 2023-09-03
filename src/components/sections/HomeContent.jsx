@@ -7,10 +7,12 @@ import useBooksContext from '../../hooks/use-books-context'
 export default function HomeContent() {
 
   const {bookList} = useBooksContext()
+  const {types} = useBooksContext()
 
   return (
     <Container className='px-6'>
-      {bookList.slice(0,2).map((list, index )=> <BookSection bookList={list} key={index} />)}
+      {/* {bookList.slice(0,2).map((list, index )=> <BookSection bookList={list} key={index} />)} */}
+      {types.slice(0,2).map((type, index)=> <BookSection type={type} key={index}/>)}
     </Container>
   )
 }
