@@ -10,7 +10,7 @@ export default function useItemsToShow(){
 
   useEffect(() => {
     window.addEventListener('resize', screenHandler)
-    console.log(screen)
+
     if(screen > 1024) {
       setCount(5)
     } else if (screen <= 1024 && screen > 768) {

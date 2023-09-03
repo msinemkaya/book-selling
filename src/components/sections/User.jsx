@@ -16,8 +16,8 @@ export default function User() {
         <SlUser fill='#6868ac' size={20}/>
       </NavbarButton>
       {isOpen && (
-        <FlexBox className='absolute top-full right-0 flex-col bg-neutral-300 rounded rounded-tr-none px-3 py-1'>
-          <Link className='whitespace-nowrap'>Log out</Link>
+        <FlexBox className='absolute top-full right-0 flex-col bg-neutral-300 rounded rounded-tr-none px-3 py-1 z-50'>
+          <Link to='/login' className='whitespace-nowrap font-semibold text-purple'>Log out</Link>
         </FlexBox>
       )}
     </RefContainer>

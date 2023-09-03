@@ -6,7 +6,6 @@ import useBooksContext from '../../hooks/use-books-context'
 
 export default function HomeContent() {
 
-  const {bookList} = useBooksContext()
   const {types} = useBooksContext()
 
   return (

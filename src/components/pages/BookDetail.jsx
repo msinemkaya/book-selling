@@ -14,7 +14,7 @@ export default function BookDetail() {
   return (
     <Container>
       <DetailHeading>{book.title}</DetailHeading>
-      <OfferList/>
+      <OfferList offers={book.offers}/>
     </Container>
   )
 }

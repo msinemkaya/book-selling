@@ -8,10 +8,8 @@ const useFindLocation = () => {
   useEffect(() => {
     if(location.pathname === '/') {
       setIsHome(true)
-      console.log(isHome)
     }else{
       setIsHome(false)
-      console.log(isHome)
     }
   }, [location.pathname])
 
