@@ -11,11 +11,12 @@ body, #root {
 } */
 
 body, #root {
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to bottom right,
     #f9bccc,
     #c2d7f8
-  );
+  ); */
+  @apply bg-neutral-300
 }
 
 .ball {

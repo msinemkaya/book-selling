@@ -7,7 +7,9 @@ import SectionPage from './SectionPage'
 import Container from '../base/Container'
 import Categories from '../sections/Categories'
 
+
 export default function ContentPage() {
+
   return (
     <Container className='z-50'>
       <Container className='py-2'>

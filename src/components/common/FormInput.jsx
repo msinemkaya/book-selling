@@ -4,7 +4,7 @@ import P from '../base/P'
 import Input from '../base/Input'
 import classNames from 'classnames'
 
-export default function FormInput({title, color}) {
+export default function FormInput({title, color, ...rest}) {
   const finalClassForP=classNames('font-bold capitalize px-1 text-sm',{
       'text-pink' : color === 'pink',
       'text-purple' : color === 'purple',
@@ -22,7 +22,7 @@ export default function FormInput({title, color}) {
       <P className={finalClassForP}>
         {title}
       </P>
-      <Input type='text' className={finalClassForInput} placeholder={`${title}..`}/>
+      <Input {...rest} className={finalClassForInput} placeholder={`${title}..`} required/>
     </Container>
   )
 }

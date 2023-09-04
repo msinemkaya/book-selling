@@ -7,7 +7,6 @@ import useBooksContext from '../../hooks/use-books-context'
 export default function BookSection({type}) {
   const {bookList} = useBooksContext()
   const listItems = bookList.filter(book => book.type.includes(type))
-  console.log(bookList)
 
   return (
     <Container>

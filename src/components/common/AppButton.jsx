@@ -2,9 +2,9 @@ import React from 'react'
 import Button from '../base/Button'
 import Star from './Star'
 
-export default function ({ children }) {
+export default function ({ children, ...rest }) {
   return (
-    <Button className='bg-neutral-200 text-red-400 rounded py-1 px-6 font-semibold relative group w-full'>
+    <Button className='bg-neutral-200 text-red-400 rounded py-1 px-6 font-semibold relative group w-full' {...rest}>
       {children}
       <Star className='top-[20%] left-[20%] w-6 group-hover:-top-[80%] group-hover:-left-[30%] group-hover:z-20'/>
       <Star className='top-[45%] left-[45%] w-4 group-hover:-top-1/4 group-hover:left-[10%] group-hover:z-20'/>

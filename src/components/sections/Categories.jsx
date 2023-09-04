@@ -11,7 +11,7 @@ export default function Categories() {
 
   return (
     <FlexBox className='justify-between gap-4 px-6 mb-8'>
-      {types.slice(0,count).map(type => <CategoryLink type={type} />)}
+      {types.slice(0,count).map((type, index) => <CategoryLink type={type} key={index}/>)}
       { count < types.length && (
         <CategoryDropdown list={types.slice(count)} /> )
       }
